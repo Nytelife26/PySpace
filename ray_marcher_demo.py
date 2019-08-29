@@ -278,7 +278,7 @@ if __name__ == '__main__':
 		# sleep until a key is pressed
 		event = pygame.event.wait()
 		if event.type == pygame.QUIT: sys.exit(0)
-		if event.type == pygame.KEYDOWN and event.unicode in '123456789':
+		if event.type == pygame.KEYDOWN and event.unicode in list('123456789'):
 			obj_render = menu[event.unicode][1]()
 			break
 	window = pygame.display.set_mode(win_size, OPENGL | DOUBLEBUF)
